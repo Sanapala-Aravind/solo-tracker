@@ -1,0 +1,80 @@
+:root {
+  --solo-bg: radial-gradient(1000px 600px at 10% 10%, #0b1020, #05060e 60%);
+  --solo-accent: #5ce1e6;
+  --solo-accent-2: #a855f7;
+  --solo-text: #e6f1ff;
+  --solo-muted: #94a3b8;
+  --solo-card: rgba(15, 23, 42, 0.7);
+  --solo-glow: 0 0 18px rgba(92,225,230,.6), 0 0 40px rgba(168,85,247,.35);
+}
+
+.bg-solo {
+  background: var(--solo-bg);
+  color: var(--solo-text);
+  background-attachment: fixed;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.solo-glow {
+  box-shadow: var(--solo-glow);
+}
+
+.solo-btn {
+  background: linear-gradient(135deg, var(--solo-accent), var(--solo-accent-2));
+  color: #0a0f1f;
+  padding: 0.75rem 1.1rem;
+  border-radius: 0.75rem;
+  font-weight: 700;
+  transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+  filter: saturate(120%);
+}
+.solo-btn:hover {
+  transform: translateY(-1px) scale(1.01);
+  box-shadow: var(--solo-glow);
+}
+
+.solo-card {
+  background: var(--solo-card);
+  border: 1px solid rgba(148,163,184,.15);
+  border-radius: 1rem;
+  backdrop-filter: blur(6px);
+}
+
+.welcome-title {
+  font-size: clamp(2.2rem, 4vw, 4rem);
+  letter-spacing: .06em;
+  line-height: 1.1;
+  text-shadow: 0 0 10px rgba(92,225,230,.6);
+  animation: pulseGlow 2.5s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0% { text-shadow: 0 0 14px rgba(92,225,230,.55); transform: translateY(0); }
+  50% { text-shadow: 0 0 26px rgba(168,85,247,.45); transform: translateY(-1px); }
+  100% { text-shadow: 0 0 14px rgba(92,225,230,.55); transform: translateY(0); }
+}
+
+.neo-grid {
+  background-image: radial-gradient(rgba(92,225,230,.12) 1px, transparent 1px),
+                    radial-gradient(rgba(168,85,247,.10) 1px, transparent 1px);
+  background-size: 20px 20px, 40px 40px;
+  background-position: 0 0, 10px 10px;
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.95));
+  pointer-events: none;
+  position: absolute; inset: 0; z-index: 0;
+}
+
+.progress {
+  height: 10px;
+  border-radius: 9999px;
+  background: rgba(148,163,184,.25);
+  overflow: hidden;
+}
+
+.progress > div {
+  height: 100%;
+  background: linear-gradient(90deg, var(--solo-accent), var(--solo-accent-2));
+  width: 0%;
+  transition: width .5s ease;
+}
