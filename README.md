@@ -41,7 +41,14 @@ Visually it has a **“neo-grid” / glowing card** style, so it feels a bit lik
 
 ## 3. Project Structure
 
-After unzipping `solo-tracker-main.zip`, you’ll see:
+After cloning the repo **or** downloading and unzipping `solo-tracker-main.zip`, you’ll have the `solo-tracker` project folder on your machine.
+
+To clone with git (recommended):
+
+```bash
+git clone https://github.com/Sanapala-Aravind/solo-tracker.git
+cd solo-tracker
+```
 
 ```text
 solo-tracker-main/
